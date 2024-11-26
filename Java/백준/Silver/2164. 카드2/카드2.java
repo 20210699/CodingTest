@@ -2,7 +2,6 @@ import java.util.*;
 import java.io.*;
 
 public class Main{
-    static int num = 0;
     public static void main(String[] args) throws IOException{
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         int N = Integer.parseInt(br.readLine());
@@ -13,8 +12,7 @@ public class Main{
         }
         while(que.size() > 1){
             que.poll();
-            num = que.poll();
-            que.add(num);
+            que.add(que.poll());
         }
         System.out.print(que.peek());
     }
